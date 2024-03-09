@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    
+  <meta charset="UTF-8">
+    
+    <title>Verificação Fibonacci</title>
+</head>
+<body>
+    
+    <script>
+        function verificaFibonacci(numero) {
+            let fibAntecessor = 0;
+            let fibAtual = 1;
+
+            while (fibAtual < numero) {
+                [fibAntecessor, fibAtual] = [fibAtual, fibAntecessor + fibAtual];
+            }
+
+            return fibAtual === numero;
+        }
+
+        const numeroInformado = parseInt(prompt("Informe um número:"));
+
+        if (verificaFibonacci(numeroInformado)) {
+            console.log(`${numeroInformado} pertence à sequência de Fibonacci.`);
+        } else {
+            console.log(`${numeroInformado} não pertence à sequência de Fibonacci.`);
+        }
+    </script>
+<!---Neste codigo será necessario acessar o console do navegador para receber a resposta do numero inserido na  caixa de prompt sobre a Sequencia de Fibonacci-->
+</body>
+</html>
+
+

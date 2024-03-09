@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+  <meta charset="UTF-8">
+    
+  <title>Inverter String</title>
+
+</head>
+<body>
+
+    <h1>Inverter String</h1>
+
+    <label for="inputString">Digite uma string:</label>
+    <input type="text" id="inputString">
+    
+    <button onclick="inverterString()">Inverter</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function inverterString() {
+            // Obtém o valor da entrada
+            var inputString = document.getElementById("inputString").value;
+
+            // Inverte os caracteres
+            var stringInvertida = inputString.split('').reverse().join('');
+
+            // Exibe o resultado
+            document.getElementById("resultado").innerHTML = "String invertida: " + stringInvertida;
+        }
+    </script>
+<!---um problema com está função é que os valores superiores a 9 se invertem também-->
+</body>
+
+</html>
